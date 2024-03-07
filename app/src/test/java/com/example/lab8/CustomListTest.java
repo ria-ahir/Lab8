@@ -56,6 +56,12 @@ public class CustomListTest {
 
     }
 
+    /**
+     * Get the city list
+     * Remove the city provided from the list
+     * Check the length of the city list
+     * Should be one less
+     */
     @Test
     public void deleteCityTest() {
         list = MockCityList();
@@ -69,7 +75,17 @@ public class CustomListTest {
         assertFalse(list.deleteCity(city1));
     }
 
-
+    /**
+     * Get the list of cities
+     * Add a new city
+     * Check if length has increased by one
+     * Add another city
+     * Check if length has increased by one
+     * Delete a city
+     * Check length of list
+     * Delete a city
+     * Check length of list
+     */
     @Test
     public void countCitiesTest() {
         list = MockCityList();
@@ -89,7 +105,4 @@ public class CustomListTest {
         list.deleteCity(city2);
         assertEquals(0, list.countCities());
     }
-
-
-
 }
